@@ -1,0 +1,194 @@
+<!-- HTML page principale (?) -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="style.css"/>
+        <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+        <title>Le question'hair interac'tif</title>
+    </head>
+
+    <body>
+
+        <header>
+            <h1>Question'hair interac'tif</h1>
+            <p>Encore un truc à s'arracher les cheveux</p>
+        </header>
+
+        <section>
+
+            <!-- BOUTON RADIO -->
+            <div id="q1">
+                <div>
+                    <label>Laquelle de ces enseignes n'existe pas ?</label>
+                </div>
+                <div>
+                    <select id="q1_reponse">
+                        <option value="none" selected disabled hidden>Cliquer pour sélectionner</option>
+                        <option  value="1">JQu'Hair'y</option>
+                        <option  value="0">Laque's à Tif</option>
+                        <option  value="0">Adult'hair</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- CHECKBOX -->
+            <div hidden id="q2">
+                <div>
+                <label for="">D'aussi loin que la mémoire collective se souvient, laquelle/lesquelles de ces personnalités ont déjà eu des cheveux ? (en public)</label><br>
+                <img id="imgTheRock" src="img/q2_the_rock.jpg" width="250" height="250" name="TheRock">
+                <img id="imgEricJudor" src="img/q2_judor.jpg" width="180" height="250" name="EricJudor">
+                <img id="imgFabienBarthez" src="img/q2_barthez.jpg" width="250" height="250" name="FabienBarthez">
+                <img id="imgBruceWillis" src="img/q2_bruce_willis.jpg" width="250" height="250" name="BruceWillis">
+                </div>
+                <div>
+                    <input type="checkbox" id="TheRock" name="q2_reponse" value="1"><label for="TheRock">The Rock</label><br>
+                    <input type="checkbox" id="EricJudor" name="q2_reponse" value="0"><label for="EricJudor">Eric Judor</label><br>
+                    <input type="checkbox" id="FabienBarthez" name="q2_reponse" value="1"><label for="FabienBarthez">Fabien Barthez</label><br>
+                    <input type="checkbox" id="BruceWillis" name="q2_reponse" value="1"><label for="BruceWillis">Bruce Willis</label>
+                </div>
+            </div>
+
+            <!-- LISTE DEROULANTE -->
+            <div hidden id="q3">
+                <div>
+                    <label>Qui a parlé dans un de ses sketchs des "cheveux chauves" ?</label>
+                </div>
+                <div>
+                    <select id="q3_reponse">
+                        <option value="none" selected disabled hidden>Cliquer pour sélectionner</option>
+                        <option  value="1">Jamel Debbouze</option>
+                        <option  value="0">Karim Debbache</option>
+                        <option  value="0">Les inconnus</option>
+                    </select>
+                </div> 
+            </div>
+
+            <!-- BOUTONS RADIO -->
+            <div hidden id="q4">
+                <div>
+                    <label>Comment s'appelle la coupe de Princesse Leia de la saga Star Wars ?</label><br>
+                    <img id="imgLeia" src="img/q4_leia.jpg" width="300" height="300" name="">
+                </div>
+                <div>
+                    <input type="radio"  name="q4_reponse" id="macaron" value="1"><label for="macaron">Coupe Macaron</label><br>
+                    <input type="radio"  name="q4_reponse" id="escoffion"><label for="escoffion">Coupe Escoffion</label><br>
+                    <input type="radio"  name="q4_reponse" id="chignon"><label for="chignon">Double pain aux raisins rabattu sur les oreilles</label>
+                </div>
+            </div>
+
+            <!-- CURSEUR -->
+            <div hidden id="q5">
+                <div>
+                    <img id="imgDreadlock" src="img/q5_dreadlock.jpg" width="300" height="300" name=""><br>
+                    <label for="q5">Quelle est la taille du plus long dreadlock du monde ? (en mètres) </label>
+                </div>
+                <div>
+                    <input type="range" name="q5_reponse" id="cheveu_taille" min="10" max="20" step="1" value="10">
+                    <span id="cheveu_taille_reponse">10</span>
+                </div>
+            </div>
+
+            <!-- IMAGE -->
+            <div hidden id="q6">
+                <div>
+                    <label for="q6">Lequel de ces personnages n'est pas Goku ?</label>
+                </div>
+                <div>
+                    <label>
+                        <input type="radio" name="q6_reponse" value="1">
+                        <img src="img/q6_goku_bardock.png" width="250" height="250">
+                      </label>
+                      <label>
+                        <input type="radio" name="q6_reponse" value="">
+                        <img src="img/q6_goku_black.png" width="250" height="250">
+                      </label><br>
+                      <label>
+                        <input type="radio" name="q6_reponse" value="">
+                        <img src="img/q6_goku_ui.png" width="250" height="250">
+                      </label>
+                      <label>
+                        <input type="radio" name="q6_reponse" value="">
+                        <img src="img/q6_goku_gt.png" width="250" height="250">
+                      </label>
+                </div>
+            </div>
+
+            <!-- MODE DE REPONSE 7 -->
+            <div hidden id="q7">
+                <div>
+                    <img id="imgFifi" src="img/q7_fifi.jpg" width="300" height="300" name=""><br>
+                    <label for="q7">Quelle est la couleur des cheveux de Fifi Brindacier ? (utiliser les couleurs de base)</label>
+                </div>
+                <div>
+                    <input type="color"  name="q7_reponse" id="fifi_couleur"><br>
+                </div>
+            </div>
+
+            <!-- MODE DE REPONSE 8 -->
+            <div hidden id="q8">
+                <div>
+                    <img id="imgZizou" src="img/q8_zizou.jpg" width="300" height="300" name=""><br>
+                    <label for="q8">A partir de quel âge se développe la calvitie chez l'homme ? (entre 20 et 40)</label>
+                </div>
+                <div>
+                    <input type="number" name="q8_reponse" id="age_calvitie" min="20" max="40">
+                </div>
+            </div>
+
+            <!-- MODE DE REPONSE 9 -->
+            <div hidden id="q9">
+                <div>
+                    <img id="imgFouinibarbiche" src="img/q9_fouinibarbiche.jpg" width="300" height="300" name=""><br>
+                    <label for="q9">A quel rappeur appartient ce mythique bouc ?</label>
+                </div>
+                <div>
+                    <input type="text" id="q9_reponse">
+                </div>
+            </div>
+
+            <!-- MODE DE REPONSE 10 -->
+            <div hidden id="q10">
+                <div>
+                    <img id="imgFC" src="img/q10_funkycops.jpg" width="300" height="300" name=""><br>
+                    Dans Funky Cops, quelles sont les coiffures des deux protagonistes ?
+                </div>
+                <div>
+                    <input type="checkbox" id="afro" name="q10_reponse" value="1"><label for="afro">Afro</label><br>
+                    <input type="checkbox" id="banane" name="q10_reponse" value="1"><label for="banane">Banane</label><br>
+                    <input type="checkbox" id="mulet" name="q10_reponse" value="0"><label for="mulet">Mulet</label><br>
+                    <input type="checkbox" id="iroquois" name="q10_reponse" value="0"><label for="iroquois">Iroquois</label>
+                </div>
+            </div>
+
+            <!-- Résultat de l'évaluation -->
+            <p id="resultat" class="consigne">
+                    
+            </p>
+
+        </section>
+
+        <!-- BOUTONS & progbar -->
+        <footer>
+            <!-- BOUTON DE VALIDATION (bouton qui envoie la réponse) -->
+            <div class="button1">
+                <button type="submit">Valider par la street ?</button>
+            </div>
+            <div class="button3" hidden>
+                <p>
+                    <button id="verif" class="styled">vérifiez vos réponses</button>
+                </p>
+            </div>
+            <!-- BOUTON RESET (pour rejouer la partie, renverra à la question 1 et reset de score) -->
+            <div class="button2">
+                <button type="reset">Ceci est un <br><strong>bouton de réinitialisation</strong></button>
+            </div>
+            <div class="progbar">
+                <p id="progquest">1/10</p>
+                <progress id ="bar" value="1" max="10"><span>O</span>/10</progress>
+            </div>
+        </footer>
+        
+        <script src='script.js' async></script>
+    </body>
+</html> 
